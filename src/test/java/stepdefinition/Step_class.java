@@ -43,6 +43,7 @@ public class Step_class extends base {
 		pm = new signup_pom();
 		pm.getHomepage();
 		System.out.println("Verify that home page is visible successfully");
+		implicit_waits();
 		screen_shot("shot1");
 	}
 

@@ -46,7 +46,7 @@ public class base {
 		
 		TakesScreenshot screenshot = (TakesScreenshot)driver;
 		File snap = screenshot.getScreenshotAs(OutputType.FILE);
-		String destination = "/Automate_testng/Screenshot"+ screen +".png";
+		String destination = "C:\\Users\\rajsa\\eclipse-workspace\\Automate_testng\\Screenshot\\"+ screen +".png";
 		File imgpath = new File(destination);
 		FileUtils.copyFile(snap, imgpath);
 	}
@@ -54,6 +54,12 @@ public class base {
 	public void element_click(WebElement element ) {
 		
 		element.click();
+	}
+	
+	public void quit() throws InterruptedException {
+		
+		Thread.sleep(4000);
+		driver.quit();
 	}
 	
 }

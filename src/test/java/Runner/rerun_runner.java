@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "@target/rerun.txt",
-				 glue = "stepdefinition",
+				 glue = {"stepdefinition", "org.hooks"},
 //				 dryRun = false,
 				 publish = true,
 				 plugin = {"pretty","html:target/rerun_cucumber-reports.html", "json:target/rerun_cucumber-reports.json"})
